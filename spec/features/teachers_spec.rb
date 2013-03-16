@@ -30,11 +30,13 @@ describe 'Teachers' do
     it 'creates a new teacher', :js => true do
       visit root_path
       click_link('Register')
+      fill_in('teacher_first_name', :with=>'This is')
       fill_in('teacher_last_name', :with => 'Socrates')
       fill_in('teacher_email', :with => 'socrates@gmail.com')
       fill_in('teacher_password', :with => 'a')
       fill_in('teacher_password_confirmation', :with => 'a')
       click_button('Create Account')
+      save_and_open_page
       page.should_not have_button('Create Account')
       page.should have_text('You have successfully created an account!')
       expect(Teacher.first.email).to eq 'socrates@gmail.com'
