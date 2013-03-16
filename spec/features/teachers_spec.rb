@@ -8,7 +8,6 @@ describe 'Teachers' do
     end
   end
 
-  # did not pass
   describe 'GET /teachers/new' do
     it 'displays the create account and cancel buttons', :js => true do
       visit root_path
@@ -27,7 +26,6 @@ describe 'Teachers' do
     end
   end
 
-  # did not pass
   describe 'POST /teachers' do
     it 'creates a new teacher', :js => true do
       visit root_path
