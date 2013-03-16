@@ -25,8 +25,10 @@ describe Assessment do
   end
 
   describe "#classes" do
-    it 'has many classes' do
+    it 'has a class' do
       assessment = Assessment.create(:name=>'Civil War Test', :type=>'test', :weight=>100)
+      assessment.klass = Klass.new
+      expect(assessment.klass).to be_an_instance_of(Klass)
     end
   end
 end
