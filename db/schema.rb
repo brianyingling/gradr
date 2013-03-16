@@ -23,8 +23,11 @@ ActiveRecord::Schema.define(:version => 20130316174703) do
   end
 
   create_table "klasses", :force => true do |t|
-    t.string  "name"
-    t.integer "teacher_id"
+    t.string   "name"
+    t.integer  "period"
+    t.integer  "teacher_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "students", :force => true do |t|
