@@ -25,7 +25,7 @@ describe Grade do
   describe '.create' do
     it 'creates a Grade record in the db' do
       student = Student.create(:first_name=>'jane',:last_name=> 'doe')
-      assessment = Assessment.create(:name=>'Civil War Test', :type=>'test', :weight=>100)
+      assessment = Assessment.create(:name=>'Civil War Test', :category=>'test', :weight=>100)
       grade = Grade.create(:num=>90)
 
     end
@@ -34,7 +34,7 @@ describe Grade do
   describe '#metadata' do
     it 'has Grade properties and relationships' do
       student = Student.create(:first_name=>'jane',:last_name=> 'doe')
-      assessment = Assessment.create(:name=>'Civil War Test', :type=>'test', :weight=>100)
+      assessment = Assessment.create(:name=>'Civil War Test', :category=>'test', :weight=>100)
       grade = Grade.create(:num=>90)
       grade.student = student
       grade.assessment = assessment
