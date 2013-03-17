@@ -1,4 +1,12 @@
-%h4= @klass.name
-%h6 Roster
-- @klass.students.each do |student|
-  %div= student.first_name
+.row
+  .large-12.columns
+    %h4= @klass.name
+    %h6 Roster
+    %table
+      %tr
+        %td First Name
+        %td Last Name
+      - @klass.students.each do |student|
+        %tr
+          %td= student.first_name
+          %td= student.last_name
