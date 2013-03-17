@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: gradr_development
   pool: 5
-  username: jillianyoungblood
+  username: brianyingling
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: gradr_test
   pool: 5
-  username: jillianyoungblood
+  username: brianyingling
   password:
 
 production:
@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: gradr_production
   pool: 5
-  username: jillianyoungblood
+  username: brianyingling
   password:
