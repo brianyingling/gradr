@@ -7,5 +7,5 @@
         %td Period
       - @klasses.each do |klass|
         %tr
-          %td= link_to klass.name, klass
+          %td= link_to klass.name, klass, :remote=>true
           %td= klass.period

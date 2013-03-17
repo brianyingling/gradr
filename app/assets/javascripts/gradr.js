@@ -9,23 +9,25 @@ function show_or_hide_login_register_links()
 {
   $('#form').empty();
 
-  if($('.last_name').length)
+  if($('#teacher_last_name').length)
     $('#anonymous').hide();
   else
     $('#anonymous').show();
 }
 
-function cancel_teacher_form()
-{
+function cancel_teacher_form() {
   $('#form').empty();
+  $('#anonymous').show();
 }
 
-function cancel_login_form()
-{
+function cancel_login_form() {
   $('#form').empty();
+  $('#anonymous').show();
 }
 
 function add_chart_element(grade)
+
+function show_chart()
 {
   $('#graphs').append('<div id=' + grade.num);
 }

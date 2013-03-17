@@ -10,4 +10,8 @@ class SessionController < ApplicationController
       session[:teacher_id] = nil
     end
   end
+
+  def destroy
+    session[:teacher_id] = nil
+  end
 end

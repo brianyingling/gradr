@@ -3,4 +3,5 @@ Gradr::Application.routes.draw do
   resources :teachers, :students, :assessments, :klasses
   get '/login' => 'session#new'
   post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
 end
