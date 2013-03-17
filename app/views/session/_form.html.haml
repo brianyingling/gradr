@@ -2,9 +2,9 @@
   .large-6.columns
   .large-3.columns
     = form_tag '/login', :remote => true do
-      = label_tag :email, :class => 'form_text'
+      = label_tag :email, nil, :class => 'form_text'
       = text_field_tag :email, nil, :autofocus => true
-      = label_tag :password, :class => 'form_text'
+      = label_tag :password, nil, :class => 'form_text'
       = password_field_tag :password
       = button_to_function('Cancel', 'cancel_login_form()', :class => 'button tiny radius alert')
       = submit_tag 'Log In', :class => 'button tiny radius success'
