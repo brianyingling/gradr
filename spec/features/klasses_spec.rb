@@ -14,7 +14,7 @@ describe 'Klasses' do
   describe 'GET /klasses/:id' do
     it 'displays a class\'s info and the number of students', :js=>true do
       visit root_path
-      # login
+      login
       klass = Klass.create(:name=>'American History',:period=>1)
       teacher = Teacher.create(:email=>'bob.smith@gmail.com',:first_name=>'Bob',:last_name=>'Smith',:password=>'bob',:password_confirmation=>'bob')
       teacher.klasses << klass
@@ -29,6 +29,7 @@ describe 'Klasses' do
       page.should have_link('American History')
       click_link('American History')
       page.should have_text('Roster')
+      page.should have_text('Assessments')
 
     end
   end
@@ -50,6 +51,8 @@ end
 
 def login
   teacher = Teacher.create(:email=>'bob.smith@gmail.com',:first_name=>'Bob',:last_name=>'Smith',:password=>'bob',:password_confirmation=>'bob')
+  klass = Klass.create(:name=>'American History',:period=>1)
+  teacher.klasses << klass
   visit root_path
   click_link('Login')
   fill_in('email', :with=>teacher.email)

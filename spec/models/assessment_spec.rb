@@ -24,23 +24,23 @@ describe Assessment do
 
   describe '.create' do
     it 'creates an Assessment record in the db' do
-      assessment = Assessment.create(:name=>'Civil War Test', :type=>'test', :weight=>100)
+      assessment = Assessment.create(:name=>'Civil War Test', :category=>'test', :weight=>100)
       expect(assessment.id).to_not eq nil
     end
   end
 
   describe '#metadata' do
     it 'has Assessment properties' do
-      assessment = Assessment.create(:name=>'Civil War Test', :type=>'test',:weight=>100)
+      assessment = Assessment.create(:name=>'Civil War Test', :category=>'test',:weight=>100)
       expect(assessment.name).to eq 'Civil War Test'
-      expect(assessment.type).to eq 'test'
+      expect(assessment.category).to eq 'test'
       expect(assessment.weight).to eq 100
     end
   end
 
   describe "#classes" do
     it 'has a class' do
-      assessment = Assessment.create(:name=>'Civil War Test', :type=>'test', :weight=>100)
+      assessment = Assessment.create(:name=>'Civil War Test', :category=>'test', :weight=>100)
       assessment.klass = Klass.new
       expect(assessment.klass).to be_an_instance_of(Klass)
     end
