@@ -24,3 +24,12 @@ s3 = Student.create(first_name: 'Lavinia', last_name: 'Squire')
 t1 = Teacher.create(email: 'ehughes@downtownacademy.com', first_name: 'Elsie', last_name: 'Hughes', password: 'a', password_confirmation: 'a')
 t2 = Teacher.create(email: 'rpainswick@downtownacademy.com', first_name: 'Rosamund', last_name: 'Painswick', password: 'a', password_confirmation: 'a')
 t3 = Teacher.create(email: 'tbarrow@downtownacademy.com', first_name: 'Thomas', last_name: 'Barrow', password: 'a', password_confirmation: 'a')
+t4 = Teacher.create(email: 'bob@gmail.com', first_name: 'Bob', last_name: 'Smith', password: 'bob', password_confirmation: 'bob')
+
+t4.klasses << k1 << k2 << k3
+k1.students << s1 << s2 << s3
+a1.grades << g1
+s1.assessments << a1
+
+
+
