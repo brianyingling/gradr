@@ -39,7 +39,8 @@ describe 'Teachers' do
       save_and_open_page
       page.should_not have_button('Create Account')
       page.should have_text('You have successfully created an account!')
-      expect(Teacher.first.email).to eq 'socrates@gmail.com'
+      teacher = Teacher.where(:email=>'socrates@gmail.com')
+      expect(teacher.first.email).to eq 'socrates@gmail.com'
     end
   end
 end

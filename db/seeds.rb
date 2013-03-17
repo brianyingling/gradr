@@ -26,8 +26,15 @@ t2 = Teacher.create(email: 'rpainswick@downtownacademy.com', first_name: 'Rosamu
 t3 = Teacher.create(email: 'tbarrow@downtownacademy.com', first_name: 'Thomas', last_name: 'Barrow', password: 'a', password_confirmation: 'a')
 t4 = Teacher.create(email: 'bob@gmail.com', first_name: 'Bob', last_name: 'Smith', password: 'bob', password_confirmation: 'bob')
 
-t4.klasses << k1 << k2 << k3
-k1.students << s1 << s2 << s3
+t4.klasses << k1 << k2
+t4.klasses << k2
+t4.klasses << k3
+
+k1.students << s1
+k1.students << s2
+k1.students << s3
+
+
 a1.grades << g1
 s1.assessments << a1
 

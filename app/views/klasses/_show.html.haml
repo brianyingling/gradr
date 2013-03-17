@@ -1,0 +1,4 @@
+%h4= @klass.name
+%h6 Roster
+- @klass.students.each do |student|
+  %div= student.first_name

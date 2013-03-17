@@ -1,6 +1,7 @@
 <% if session[:teacher_id].present? %>
-  $('.nav-bar ul').append('<%=j render(:partial => 'logout_link') %>');
+  $('.nav-bar ul').empty().append('<%=j render(:partial => 'logout_link') %>');
   show_or_hide_login_register_links();
+  $('#anonymous').hide();
 <% else %>
   $('#form').empty().append('<%=j render(:partial => 'form') %>');
 <% end %>
