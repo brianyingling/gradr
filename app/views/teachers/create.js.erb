@@ -1,5 +1,5 @@
 <% if @teacher.valid? %>
-  $('#form').empty().after('<p>You have successfully created an account!</p>');
+  $('#form').empty().after('<p class='congratulations'>You have successfully created an account!</p>');
   // $('#form + p').fadeOut(3000, function(){ $('#form + p').remove(); });
 <% else %>
   $('#form').empty().append('<%=j render(:partial => 'form') %>');

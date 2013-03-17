@@ -9,7 +9,7 @@ function show_or_hide_login_register_links()
 {
   $('#form').empty();
 
-  if($('#teacher_last_name').length)
+  if($('.teacher.email').length)
     $('#anonymous').hide();
   else
     $('#anonymous').show();
@@ -17,17 +17,29 @@ function show_or_hide_login_register_links()
 
 function cancel_teacher_form() {
   $('#form').empty();
-  $('#anonymous').show();
 }
 
 function cancel_login_form() {
   $('#form').empty();
-  $('#anonymous').show();
 }
 
+function add_chart_element(grade)
 
 function show_chart()
 {
-
+  $('#graphs').append('<div id=' + grade.num);
 }
 
+function display_chart()
+{
+  $('#' + quote.symbol).append(graph);
+
+  new Morris.Line({
+    element: grade.num + '_graph',
+    data: grades[grade.num],
+    xkey: 'date_completed',
+    ykeys: ['grade'],
+    labels: [grade.num],
+    ymin: 'auto',
+    ymax: 'auto'
+}
