@@ -25,9 +25,21 @@ function cancel_login_form()
   $('#form').empty();
 }
 
-function show_chart()
+function add_chart_element(grade)
 {
-
+  $('#graphs').append('<div id=' + grade.num);
 }
 
-function
+function display_chart()
+{
+  $('#' + quote.symbol).append(graph);
+
+  new Morris.Line({
+    element: grade.num + '_graph',
+    data: grades[grade.num],
+    xkey: 'date_completed',
+    ykeys: ['grade'],
+    labels: [grade.num],
+    ymin: 'auto',
+    ymax: 'auto'
+}
