@@ -16,4 +16,9 @@ class Assessment < ActiveRecord::Base
   attr_accessible :name, :category, :date_completed, :weight, :class_id
   belongs_to :klass
   has_many :grades
+
+  def average
+    self.grades.map(&:num).reduce(:+) / self.grades.count
+  end
+
 end

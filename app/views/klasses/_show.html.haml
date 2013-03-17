@@ -1,6 +1,10 @@
 .row
   .large-6.columns
-    %h4= @klass.name
+    %h4= "#{@klass.name}, Period #{@klass.period}"
+  .large-6.columns
+    %h5= "Teacher: #{@klass.teacher.first_name} #{@klass.teacher.last_name}"
+.row
+  .large-6.columns
     %h6 Roster
     %table
       %tr
@@ -10,3 +14,13 @@
           %tr
             %td= student.first_name
             %td= student.last_name
+  .large-6.columns
+    %h6 Assessments
+    %table
+      %tr
+        %td Name
+        %td Average
+        - @klass.assessments.each do |assessment|
+          %tr
+            %td= assessment.name
+            %td= assessment.average
