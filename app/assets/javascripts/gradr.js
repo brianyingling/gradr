@@ -24,3 +24,10 @@ function cancel_login_form()
 {
   $('#form').empty();
 }
+
+function show_chart()
+{
+
+}
+
+function

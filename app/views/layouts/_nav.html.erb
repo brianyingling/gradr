@@ -1,6 +1,8 @@
 <div class='row'>
     <div class='nav-bar left'>
-      <h2 class='subheader'>Gradr</h2>
+      <div class='header'>
+      <h1 class='subheader'>Gradr</h1>
+      </div>
     </div>
     <div class='nav-bar right'>
       <ul class='button-group'>
@@ -12,12 +14,11 @@
   <div class='tabbable'>
     <ul class="nav nav-tabs">
       <li class="active">
-        <a href="#">Gradr</a>
+        <li><%= link_to "Gradr", root_path, :class => 'tabs' %></li>
       </li>
-      <li><%= link_to "My Classes", klasses_path, :remote=>true %></li>
-      <li><a href="#">My Assignments</a></li>
-      <li><a href="#">My Students</a></li>
-      <li>
+      <li><%= link_to "My Classes", klasses_path, :class => 'tabs', :remote=>true %></li>
+      <li><%= link_to "My Assignments", assessments_path, :class => 'tabs' %></li>
+      <li><%= link_to "My Students", students_path, :class => 'tabs' %></li>
     </ul>
   </div>
 </div>

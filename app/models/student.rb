@@ -15,3 +15,7 @@ class Student < ActiveRecord::Base
   has_many :klasses
   has_many :assessments, :through => :grades
 end
+
+def progress
+  self.grades.sort_by {|g| g.date_completed}
+end

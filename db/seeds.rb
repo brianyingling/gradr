@@ -32,7 +32,7 @@ t4 = Teacher.create(email: 'bob@gmail.com', first_name: 'Bob', last_name: 'Smith
 t4.klasses << k1 << k2 << k3
 k1.students << s1 << s2 << s3
 a1.grades << g1
-s1.assessments << a1
+s1.assessments << a1 << a2 << a3
 
 
 
