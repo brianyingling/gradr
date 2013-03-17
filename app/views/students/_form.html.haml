@@ -1,9 +1,9 @@
 .row
   .large-3.columns
     = form_for @student, :url => students_path, :remote => true do |f|
-      = f.label :last_name
+      = f.label :last_name, :class => 'form_text'
       = f.text_field :last_name
-      = f.label :first_name
+      = f.label :first_name, :class => 'form_text'
       = f.text_field :first_name, :autofocus => true
       = button_to_function('Cancel', 'cancel_student_form()', :class => 'button tiny radius alert')
       = f.submit "Add Student", :class => 'button tiny radius success'
