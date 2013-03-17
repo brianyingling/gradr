@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/css?family=Skranji);
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT);
+
+body
+{
+  background: url(http://www.charlesrussell.co.uk/UserFiles/image/blackboard-with-chalk.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.subheader
+{
+  color: white;
+  font-family: 'Skranji', cursive;
+}
+
+.tabs
+{
+font-family: 'Old Standard TT', serif;
+font-size: 24px;
+font-weight: bold;
+}

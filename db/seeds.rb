@@ -4,6 +4,9 @@ Klass.delete_all
 Student.delete_all
 Teacher.delete_all
 
+a1 = Assessment.create(name: 'American History Mid-Term', date_completed: '12/01/2012', type: 'Exam', weight: '33%')
+a2 = Assessment.create(name: 'American History Final', type: 'Exam', date_completed: '04/15/2013', weight: '33%')
+a3 = Assessment.create(name: 'Civil War Writing Assessment', date_completed: '03/01/2013', type: 'Essay', weight: '33%')
 
 a1 = Assessment.create(name: 'American History Mid-Term', type: 'Exam', weight: '33%')
 a2 = Assessment.create(name: 'American History Final', type: 'Exam', weight: '33%')
@@ -36,7 +39,7 @@ k1.students << s3
 
 
 a1.grades << g1
-s1.assessments << a1
+s1.assessments << a1 << a2 << a3
 
 
 

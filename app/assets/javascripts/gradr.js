@@ -24,3 +24,10 @@ function cancel_login_form() {
   $('#form').empty();
   $('#anonymous').show();
 }
+
+
+function show_chart()
+{
+
+}
+

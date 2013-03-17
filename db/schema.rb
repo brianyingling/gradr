@@ -11,15 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+# <<<<<<< HEAD
+ActiveRecord::Schema.define(:version => 20130317175209) do
+# =======
 ActiveRecord::Schema.define(:version => 20130317173229) do
+# >>>>>>> 321c782127f67a33379f83b78b2c884d65c8189e
 
   create_table "assessments", :force => true do |t|
     t.string   "name"
     t.string   "type"
     t.integer  "weight"
     t.integer  "klass_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.date     "date_completed"
   end
 
   create_table "grades", :force => true do |t|
