@@ -1,3 +1,11 @@
-%h2 My List of Classes
-- @klasses.each do |klass|
-  = klass.name
+.row
+  .large-12.columns
+    %h4 My List of Classes
+    %table
+      %tr
+        %td Name
+        %td Period
+      - @klasses.each do |klass|
+        %tr
+          %td= link_to klass.name, klass
+          %td= klass.period
