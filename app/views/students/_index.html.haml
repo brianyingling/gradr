@@ -1,0 +1,7 @@
+.row
+  .large-12.columns
+    %h4 Students
+    %ul
+      %li last_name + ',' + 'first_name'
+      - @students.each do |student|
+      = link_to student.last_name, klass, :remote=>true
