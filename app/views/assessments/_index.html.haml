@@ -1,0 +1,19 @@
+.row
+  .large-12.columns
+    %h3 My List of Assignments
+    %table
+      %tr
+        %td Name
+        %td Class
+        %td Period
+        %td Average
+      - @klasses.each do |klass|
+        %h5= "#{klass.name}, #{klass.period}"
+        %table
+          %tr
+            %td Name
+            %td Average
+            - klass.assessments.each do |assessment|
+              %tr
+                %td= link_to assessment.name, assessment
+                %td= assessment.average
