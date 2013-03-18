@@ -14,9 +14,9 @@
 new Morris.Line({
   element: 'chart',
   data: [
-    {year: '2008',value:20},
-    {year: '2009',value:10},
-    {year: '2010',value:5}
+  <% (1..9).each do |i| %>
+    "{Period: i,value:i},"
+  <% end %>
   ],
   xkey: 'year',
   ykeys : ['value'],

@@ -3,23 +3,26 @@
     <h3>This is a Chart</h3>
     <p>I wanted to include a chart in this app even if it killed me.</p>
   </div>
+</div>
 <div class='row'>
   <div class="large-12.columns">
-    <div id="chart" style='width:250px;height:250px;'></div>
+    <div id="chart"></div>
   </div>
 </div>
 
 
 <script>
+
 new Morris.Line({
   element: 'chart',
   data: [
-    {year: '2008',value:20},
-    {year: '2009',value:10},
-    {year: '2010',value:5}
+  <% (1..9).each do |i| %>
+    {Period: <%= i %>,Period:<%= i %>},
+  <% end %>
   ],
-  xkey: 'year',
-  ykeys : ['value'],
+  xkey: 'Period',
+  ykeys : ['Period'],
   labels: ['Value']
 });
+
 </script>

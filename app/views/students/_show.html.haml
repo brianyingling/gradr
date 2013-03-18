@@ -2,20 +2,31 @@
   .large-6.columns
     %h4= "#{@student.first_name} #{@student.last_name}"
 .row
-  .large-6.columns
+  .large-12.columns
     %h6 Roster
     %table
       %tr
         %td Class
         - @student.klasses.each do |klass|
-  .large-6.columns
-    %h6 Assessments
-    %table
-      %tr
-        %td Average
-        - @klass.assessments.each do |assessment|
           %tr
-            %td= assessment.name
-            %td= assessment.average
+            %td= klass.name
+            - if klass.assessments.present?
+              %td
+                %tr
+                  %td
+                    - klass.assessments.each do |assessment|
+                      %h4= assessment.name
+
+/ %tr
+/   %td klass.name
+/   %h6 Assessments
+/   %table
+/     %tr
+/       %td Average
+/       - @klass.assessments.each do |assessment|
+/         %tr
+/           %td= assessment.name
+/           - binding.pry
+/           %td= assessment.average
 
 
