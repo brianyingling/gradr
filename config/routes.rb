@@ -4,4 +4,7 @@ Gradr::Application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
+
+  get '/chart' => 'home#show_chart', :as=>'chart'
+
 end

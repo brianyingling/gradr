@@ -3,6 +3,8 @@
   .large-12.columns
     = link_to('Add Student', new_student_path, :remote => true, :class => 'button tiny radius', :class => 'button_font')
     %h3 Students
+.row
+  .large-3.columns
     %ul
       - @students.each do |student|
         %li= link_to "#{student.last_name}, #{student.first_name}", student, :remote=>true
@@ -11,5 +13,6 @@
         .clear
         %br
         %br
-#form
-#container
+  .large-9.columns
+    #form
+/ #container

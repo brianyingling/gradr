@@ -11,5 +11,6 @@
  *= require_self
  *= require 'bootstrap/css/bootstrap.min.css'
  *= require 'foundation4/css/foundation.min.css'
+ *= require 'morris/morris.css'
  *= require 'gradr'
  */

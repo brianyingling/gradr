@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require 'underscore.min.js'
 //= require 'foundation4/js/foundation.min.js'
+//= require 'morris/morris.js'
 //= require 'gradr.js'

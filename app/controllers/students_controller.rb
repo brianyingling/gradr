@@ -9,6 +9,7 @@ class StudentsController < ApplicationController
 
   def create
      @student = Student.create(params[:student])
+     @students = Student.all
   end
 
   def edit

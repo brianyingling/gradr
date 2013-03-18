@@ -1,7 +1,7 @@
 $(document).ready(document_ready);
 
 $(function(){
-  $('#students').click(delete_student);
+  // $('#students').click(delete_student);
   $('#students').click(edit_student);
 });
 
@@ -31,7 +31,7 @@ function edit_student()
   $.ajax({
       dataType: 'json',
       type: "get",
-      url: "/students/" + id,
+      url: "/students/" + id
     }).done(populate_student_form);
 }
 
@@ -60,6 +60,10 @@ function show_or_hide_login_register_links()
 }
 
 function cancel_teacher_form() {
+  $('#form').empty();
+}
+
+function cancel_student_form() {
   $('#form').empty();
 }
 
