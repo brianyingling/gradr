@@ -1,6 +1,13 @@
-<% if @teacher.valid? %>
   $('#form').empty().after('<p>You have successfully added a student!</p>');
   $('#form + p').fadeOut(3000, function(){ $('#form + p').remove(); });
+<% else %>
+  $('#form').empty().append('<%=j render(:partial => 'form') %>');
+<% end %>
+
+<% if session[:teacher_id].present? %>
+  $('.nav-bar ul').empty().append('<%=j render(:partial => 'logout_link') %>');
+  show_or_hide_login_register_links();
+  $('#anonymous').hide();
 <% else %>
   $('#form').empty().append('<%=j render(:partial => 'form') %>');
 <% end %>

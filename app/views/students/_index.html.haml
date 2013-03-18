@@ -1,7 +1,11 @@
 .row
   .large-12.columns
+    #anonymous
+    = link_to('Add Student', new_student_path, :remote => true, :class => 'button tiny radius', :class => 'button_font')
+    = link_to('Delete Student', @student, :method=>'delete', :remote => true, :class => 'button tiny radius', :class => 'button_font')
     %h4 Students
     %ul
-      %li last_name + ',' + 'first_name'
       - @students.each do |student|
-      = link_to student.last_name, klass, :remote=>true
+        %li= link_to "#{student.last_name}, #{student.first_name}", student, :remote=>true
+#form
+#container
