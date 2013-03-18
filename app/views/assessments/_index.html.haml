@@ -18,5 +18,5 @@
             %td Average
             - klass.assessments.each do |assessment|
               %tr
-                %td= link_to assessment.name, assessment
+                %td= link_to assessment.name, assessment, :remote=>true
                 %td= assessment.average
