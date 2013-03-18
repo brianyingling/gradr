@@ -1,6 +1,6 @@
 .row
   .large-3.columns
-    = form_for @student, :url => students_path, :remote => true do |f|
+    = form_for @student, :remote => true do |f|
       = f.label :last_name, :class => 'form_text'
       = f.text_field :last_name
       = f.label :first_name, :class => 'form_text'
