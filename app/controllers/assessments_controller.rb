@@ -7,7 +7,6 @@ class AssessmentsController < ApplicationController
     @klasses = @auth.klasses
   end
   def create
-    binding.pry
     klass_ids = params[:klass][:klass_ids]
     klass_ids.each do |klass_id|
       @assessment = Assessment.create(params[:assessment])
@@ -16,5 +15,10 @@ class AssessmentsController < ApplicationController
       @assessment.save
     end
   end
+  def show
+    @assessment = Assessment.find(params[:id])
+  end
+
+
 
 end
