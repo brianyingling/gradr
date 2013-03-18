@@ -23,9 +23,10 @@ body
 
 .tabs
 {
-font-family: 'Old Standard TT', serif;
-font-size: 24px;
-font-weight: bold;
+  font-family: 'Old Standard TT', serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 }
 
 .button_font
@@ -52,4 +53,20 @@ font-weight: bold;
 p
 {
   color: white;
+}
+
+.student
+{
+  float: left;
+}
+
+h3
+{
+  font-family: 'Old Standard TT', serif;
+  color: white;
+}
+
+.li
+{
+  background: white;
 }
