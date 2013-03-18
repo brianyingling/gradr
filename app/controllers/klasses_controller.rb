@@ -8,4 +8,9 @@ class KlassesController < ApplicationController
   def new
     @klass = Klass.new
   end
+  def create
+    @klass = Klass.create(params[:klass])
+    @klass.teacher = @auth
+    @klass.save
+  end
 end

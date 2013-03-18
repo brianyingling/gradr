@@ -1,9 +1,10 @@
 .row
-  .large-12.columns
-  %h4 New Class
-  = form_for @klass do |f|
-    = f.label       :name
-    = f.text_field  :name
-    = f.label       :period
-    = f.text_field  :period
-    = f.submit
+  .large-3.columns
+    %h4 New Class
+    = form_for @klass, :remote=>true do |f|
+      = f.label       :name
+      = f.text_field  :name
+      = f.label       :period
+      = f.text_field  :period
+      = f.submit "Create Class"
+  .large-9.columns
