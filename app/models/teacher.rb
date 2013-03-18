@@ -17,4 +17,15 @@ class Teacher < ActiveRecord::Base
   has_many :klasses
   validates :email, :first_name, :last_name, :presence => true
   validates :email, :uniqueness=>true
+
+  def list_assessments
+    binding.pry
+    self.klasses.map(&:assessments).map(&:num).flatten
+
+    # self.klasses.each do |klass|
+    #   klass.assessments.each do |assessment|
+    #   end
+    # end
+  end
+
 end

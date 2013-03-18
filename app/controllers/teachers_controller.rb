@@ -14,4 +14,5 @@ class TeachersController < ApplicationController
     #   teacher.user = @teacher
     # end
   end
+
 end
