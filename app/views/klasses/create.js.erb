@@ -1,0 +1,4 @@
+alert('got here');
+$('#container').empty().append('<p>You have successfully added a class!</p>');
+$('#form').empty().after('<p>You have successfully added a class!</p>');
+$('#form + p').fadeOut(3000, function(){ $('#form + p').remove(); });

@@ -1,0 +1,24 @@
+.row
+  .large-3.columns
+    %h4 New Assignment
+    = form_for @assessment, :remote=>true do |f|
+      = f.label       :name
+      = f.text_field  :name
+      = f.label       :category
+      = f.text_field  :category
+      = f.label       :weight
+      = f.text_field  :weight
+      = f.label       :date_completed
+      = f.text_field  :date_completed
+      - @klasses.each do |klass|
+        %div
+          = check_box_tag 'klass[klass_ids][]', klass.id
+          = "#{klass.name}, #{klass.period}"
+      = f.submit "Create Assignment"
+  .large-9.columns
+
+/ - @klasses.each do |klass|
+/   %div
+/     = check_box_tag 'klass[klass_ids][]', klass.id
+/     = "#{klass.name}, #{klass.period}"
+
