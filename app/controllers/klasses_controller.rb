@@ -5,4 +5,7 @@ class KlassesController < ApplicationController
   def show
     @klass = Klass.find(params[:id])
   end
+  def new
+    @klass = Klass.new
+  end
 end

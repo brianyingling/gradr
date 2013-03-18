@@ -8,9 +8,9 @@
 </head>
 <body>
   <%= render :partial => 'layouts/nav' %>
-
-  <%= render :partial => 'layouts/body' %>
-  <%= yield %>
+  <div id='container'>
+    <%= yield %>
+  </div>
   <%= render :partial => 'layouts/footer' %>
 
 </body>
