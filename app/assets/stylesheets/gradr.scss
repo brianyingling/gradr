@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Skranji);
 @import url(http://fonts.googleapis.com/css?family=Old+Standard+TT);
+@import url(http://fonts.googleapis.com/css?family=Crete+Round);
 
 body
 {
@@ -23,7 +24,7 @@ body
 
 .tabs
 {
-  font-family: 'Old Standard TT', serif;
+  font-family: 'Crete Round', serif;
   font-size: 24px;
   font-weight: bold;
   color: white;
@@ -31,7 +32,7 @@ body
 
 .button_font
 {
-  font-family: 'Old Standard TT', serif;
+  font-family: 'Crete Round', serif;
 }
 
 .congratulations
@@ -42,7 +43,7 @@ body
 .form_text
 {
   color: white;
-  font-family: 'Old Standard TT', serif;
+  font-family: 'Crete Round', serif;
 }
 
 .login_form
@@ -60,13 +61,54 @@ p
   float: left;
 }
 
+h2
+{
+  font-family: 'Crete Round', serif;
+  color: white;
+}
+
 h3
 {
-  font-family: 'Old Standard TT', serif;
+  font-family: 'Crete Round', serif;
+  color: white;
+}
+
+h4
+{
+  font-family: 'Crete Round', serif;
+  color: white;
+}
+
+h5
+{
+  font-family: 'Crete Round', serif;
+  color: white;
+}
+
+h6
+{
+  font-family: 'Crete Round', serif;
   color: white;
 }
 
 .li
 {
   background: white;
+}
+
+.success
+{
+  margin-left: 350px;
+}
+
+table
+{
+  width: 450px;
+  font-family: 'Crete Round', serif;
+  font-size: 32px;
+}
+
+.checkboxes
+{
+  color: white;
 }

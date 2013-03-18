@@ -2,18 +2,19 @@
   .large-3.columns
     %h4 New Assignment
     = form_for @assessment, :remote=>true do |f|
-      = f.label       :name
+      = f.label       :name, :class => 'form_text'
       = f.text_field  :name
-      = f.label       :category
+      = f.label       :category, :class => 'form_text'
       = f.text_field  :category
-      = f.label       :weight
+      = f.label       :weight, :class => 'form_text'
       = f.text_field  :weight
-      = f.label       :date_completed
+      = f.label       :date_completed, :class => 'form_text'
       = f.text_field  :date_completed
       - @klasses.each do |klass|
-        %div
+        %div.checkboxes
           = check_box_tag 'klass[klass_ids][]', klass.id
           = "#{klass.name}, #{klass.period}"
+          %p
       = f.submit "Create Assignment"
   .large-9.columns
 

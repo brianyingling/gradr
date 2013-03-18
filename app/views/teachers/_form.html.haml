@@ -1,5 +1,5 @@
 .row
-  .large-3.columns
+  .large-6.columns
     / = render(:partial => 'shared/errors', :locals => {:object => @teacher})
     = form_for @teacher, :url => teachers_path, :remote => true do |f|
       = f.label :email, :class => 'form_text'
@@ -12,6 +12,6 @@
       = f.password_field :password
       = f.label :password_confirmation, :class => 'form_text'
       = f.password_field :password_confirmation
-      = button_to_function('Cancel', 'cancel_teacher_form()', :class => 'button tiny radius alert')
-      = f.submit "Create Account", :class => 'button tiny radius success'
-  .large-9.columns
+      = button_to_function('Cancel', 'cancel_teacher_form()', :class => 'button tiny radius')
+      = f.submit "Create Account", :class => 'button tiny radius'
+  .large-6.columns
