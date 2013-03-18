@@ -3,7 +3,7 @@
     = link_to "Add Assignment", new_assessment_path, :remote=>true
 .row
   .large-12.columns
-    %h3 My List of Assignments
+    %h3 My Assignments
     %table
       %tr
         %td Name
@@ -15,6 +15,8 @@
         %table
           %tr
             %td Name
+            %td Class
+            %td Period
             %td Average
             - klass.assessments.each do |assessment|
               %tr

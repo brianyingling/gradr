@@ -1,19 +1,15 @@
 .row
   .large-12.columns
     = link_to('Add Student', new_student_path, :remote => true, :class => 'button tiny radius', :class => 'button_font')
-    %h3 Students
 .row
-  .large-3.columns
+  .large-6.columns
     %h2 Student Roster
     %table
       %tr
-        %td Name
-        %td Edit
-        %td Delete
         - @students.each do |student|
           %tr
             %td= link_to "#{student.last_name}, #{student.first_name}", student, :remote=>true
-            %td= link_to('Delete', student, :method=>'delete', :class => 'button radius alert tiny', :remote=>true)
+            %td= link_to('Delete', student, :method=>'delete', :class => 'button radius tiny', :remote=>true)
             %td= link_to('Edit', edit_student_path(student.id), :class => 'edit_task button radius tiny', :remote=>true)
-  .large-9.columns
+  .large-6.columns
     #form
